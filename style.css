@@ -1,0 +1,122 @@
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+:root {
+   --background: #eff4f6;
+   --text: #11191d;
+   --sec: #3e2744;
+   --therd: #dcc9c1;
+}
+
+body {
+   background: var(--therd);
+}
+
+.profile {
+   margin-block: 50px;
+}
+.container {
+   max-width: 1200px;
+   padding-inline: 20px;
+   margin-inline: auto;
+}
+
+.profile-box {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 40px;
+}
+
+.profile-box .box {
+   width: 100%;
+   background: var(--background);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 20px 30px;
+   border-radius: 5px;
+}
+
+.box .image{
+   margin: 10px 0;
+   height: 150px;
+   width: 150px;
+   background: var(--therd);
+   padding: 3px;
+   border-radius: 50%;
+}
+
+.box .image img{
+   height: 100%;
+   width: 100%;
+   max-width: 100%;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px solid var(--background);
+}
+
+.box p{
+   margin-top: 8px;
+   font-size: 16px;
+   font-weight: 400;
+ }
+
+ .box .name_job{
+   margin: 10px 0 3px 0;
+   color: var(--text);
+   font-size: 18px;
+   font-weight: 600;
+ }
+
+ .btns{
+   margin-top: 20px;
+   margin-bottom: 5px;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+ }
+ .btns button{
+   background: var(--sec);
+   width: 100%;
+   padding: 9px 0px;
+   outline: none;
+   border: 2px solid var(--sec);
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 18px;
+   font-weight: 400;
+   color: var(--sec);
+   transition: all 0.3s linear;
+ }
+ .btns button:first-child{
+   background: none;
+   margin-right: 5px;
+ }
+ .btns button:last-child{
+   color: var(--background);
+   margin-left: 5px;
+ }
+ .btns button:first-child:hover{
+   background: var(--sec);
+   color: var(--background);
+ }
+ .btns button:hover{
+   color: var(--background);
+ }
+
+ 
+ @media (max-width:380px){
+   .profile-box {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   }
+ }
+
+ @media (max-width:300px){
+   .profile-box {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   }
+ }
